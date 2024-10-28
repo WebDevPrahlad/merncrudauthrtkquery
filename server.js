@@ -18,13 +18,7 @@ app.use(cors({
   credentials: true
 }));
 
-// Additional CORS headers setup
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://roaring-faloodeh-9af903.netlify.app'); // Replace with your Netlify domain
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-  next();
-});
+
 
 app.use(express.json());
 app.use('/api/auth', authRoutes);
